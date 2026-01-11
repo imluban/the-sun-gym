@@ -115,3 +115,69 @@ footer {
   font-size: 14px;
   color: #8E8E8E;
 }
+
+
+/* PROGRAMS PAGE */
+
+.page-hero {
+  padding: 160px 60px 80px;
+  text-align: center;
+}
+
+.page-hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.page-hero p {
+  color: #8E8E8E;
+}
+
+.program-detail {
+  padding: 80px 60px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+}
+
+.program-block {
+  background: #1A1A1A;
+  padding: 40px;
+  border: 1px solid #2A2A2A;
+}
+
+.program-block h2 {
+  margin-bottom: 15px;
+}
+
+.program-block p {
+  color: #8E8E8E;
+  margin-bottom: 20px;
+}
+
+.program-block ul {
+  list-style: none;
+}
+
+.program-block ul li {
+  margin-bottom: 10px;
+  color: #C9A24D;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .page-hero {
+    padding: 120px 20px 60px;
+  }
+
+  .page-hero h1 {
+    font-size: 34px;
+  }
+
+  .program-detail {
+    padding: 60px 20px;
+  }
+}
+
+
