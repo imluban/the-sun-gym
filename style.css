@@ -181,3 +181,40 @@ footer {
 }
 
 
+/* COACHES */
+
+.coach-grid {
+  padding: 80px 60px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+}
+
+.coach-card {
+  background: #1A1A1A;
+  padding: 30px;
+  text-align: center;
+  border: 1px solid #2A2A2A;
+}
+
+.coach-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.coach-card h3 {
+  margin-bottom: 8px;
+}
+
+.coach-card p {
+  color: #8E8E8E;
+}
+
+@media (max-width: 768px) {
+  .coach-grid {
+    padding: 60px 20px;
+  }
+}
+
