@@ -191,6 +191,7 @@ footer {
 }
 
 
+
 /* PROGRAMS PAGE */
 
 .page-hero {
@@ -253,6 +254,7 @@ footer {
     padding: 60px 20px;
   }
 }
+
 
 
 /* COACHES */
@@ -336,3 +338,72 @@ footer {
 
 
 
+/* COMMUNITY */
+.community-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 80px 60px;
+  text-align: center;
+}
+
+.community-card {
+  background: #1A1A1A;
+  padding: 40px;
+  border: 1px solid #2A2A2A;
+  transition: transform 0.3s ease;
+}
+
+.community-card:hover {
+  transform: translateY(-6px);
+}
+
+.community-card h3 {
+  margin-bottom: 15px;
+}
+
+.community-card p {
+  color: #C9A24D;
+}
+
+@media (max-width: 768px) {
+  .community-section {
+    padding: 60px 20px;
+  }
+}
+
+
+
+/* PRICING */
+.pricing-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 80px 60px;
+  text-align: center;
+}
+
+.pricing-card {
+  background: #1A1A1A;
+  padding: 40px;
+  border: 1px solid #2A2A2A;
+  transition: transform 0.3s ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-6px);
+}
+
+.pricing-card h3 {
+  margin-bottom: 15px;
+}
+
+.pricing-card p {
+  color: #C9A24D;
+}
+
+@media (max-width: 768px) {
+  .pricing-section {
+    padding: 60px 20px;
+  }
+}
