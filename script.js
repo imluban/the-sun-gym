@@ -1,21 +1,27 @@
-// Mobile toggle
-const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('.nav-links');
+document.addEventListener("DOMContentLoaded", () => {
 
-hamburger.addEventListener('click', () => {
-  navLinks.classList.toggle('show');
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+
+  if (hamburger && navLinks) {
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+  }
+
+  const pageMap = {
+    'index.html': 'nav-home',
+    'programs.html': 'nav-programs',
+    'coaches.html': 'nav-coaches',
+    'community.html': 'nav-community',
+    'pricing.html': 'nav-pricing',
+    'contact.html': 'nav-contact'
+  };
+
+  const path = window.location.pathname.split("/").pop() || "index.html";
+  const activeId = pageMap[path];
+  const activeEl = document.getElementById(activeId);
+
+  if (activeEl) activeEl.classList.add('active');
+
 });
-
-// Highlight active page
-const pageMap = {
-  'index.html': 'nav-home',
-  'programs.html': 'nav-programs',
-  'coaches.html': 'nav-coaches',
-  'community.html': 'nav-community',
-  'pricing.html': 'nav-pricing',
-  'contact.html': 'nav-contact'
-};
-
-const path = window.location.pathname.split("/").pop();
-const activeId = pageMap[path] || 'nav-home';
-document.getElementById(activeId).classList.add('active');
