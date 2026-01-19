@@ -11,6 +11,7 @@ body {
   line-height: 1.6;
 }
 
+
 /* NAV */
 .nav {
   position: fixed;
@@ -125,6 +126,7 @@ body {
   }
 }
 
+
 /* SELECTION SEPARATORS*/
 .section-divider {
   width: 80px;
@@ -148,6 +150,7 @@ body {
   background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.6));
 }
 
+
 /* UNIVERSAL CTA BUTTON */
 .btn-cta {
   display: inline-block;
@@ -166,6 +169,7 @@ body {
   transform: translateY(-2px);
   box-shadow: 0 10px 25px rgba(201,162,77,0.3);
 }
+
 
 /* HERO */
 .hero {
@@ -210,6 +214,7 @@ body {
   color: #C9A24D;
   background: transparent;
 }
+
 
 /* ABOUT */
 .about {
@@ -301,6 +306,106 @@ body {
   color: #C9A24D;
 }
 
+
+/* CHOOSE YOUR PATH */
+.path-section {
+  padding: 120px 60px;
+  text-align: center;
+}
+
+.path-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  margin-bottom: 12px;
+}
+
+.path-sub {
+  color: #8E8E8E;
+  max-width: 720px;
+  margin: 0 auto 40px;
+}
+
+.path-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.path-card {
+  position: relative;
+  height: 340px;
+  padding: 40px;
+  border: 1px solid #2A2A2A;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-align: left;
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.path-card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  z-index: 2;
+}
+
+.path-card p {
+  color: #C9A24D;
+  font-size: 14px;
+  margin-bottom: 20px;
+  z-index: 2;
+}
+
+.path-card .btn-cta {
+  align-self: flex-start;
+  z-index: 2;
+}
+
+/* OVERLAY */
+.path-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.85),
+    rgba(0,0,0,0.4)
+  );
+  z-index: 1;
+}
+
+/* BACKGROUND IMAGES */
+.path-card.elite {
+  background-image: url("assets/images/path-elite.jpg");
+}
+
+.path-card.community {
+  background-image: url("assets/images/path-community.jpg");
+}
+
+.path-card.lifestyle {
+  background-image: url("assets/images/path-lifestyle.jpg");
+}
+
+/* HOVER EFFECT */
+.path-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .path-section {
+    padding: 80px 20px;
+  }
+  .path-card {
+    height: 300px;
+  }
+}
+
+
 /* PROGRAMS PAGE / GRID / BLOCKS */
 .program-detail {
   padding: 80px 60px;
@@ -354,6 +459,7 @@ body {
   margin-bottom: 10px;
 }
 
+
 /* COACHES */
 .coach-grid {
   padding: 80px 60px;
@@ -390,6 +496,7 @@ body {
 .coach-card p {
   color: #8E8E8E;
 }
+
 
 /* CONTACT */
 .contact-section {
@@ -430,6 +537,7 @@ body {
   border: none;
 }
 
+
 /* COMMUNITY */
 .community-section {
   display: grid;
@@ -458,6 +566,7 @@ body {
 .community-card p {
   color: #C9A24D;
 }
+
 
 /* PRICING */
 .pricing-section {
@@ -488,6 +597,7 @@ body {
   color: #C9A24D;
 }
 
+
 /* PAGE HERO */
 .page-hero {
   padding: 160px 60px 80px;
@@ -503,6 +613,7 @@ body {
 .page-hero p {
   color: #8E8E8E;
 }
+
 
 /* FOOTER */
 .footer {
@@ -533,6 +644,8 @@ body {
   font-weight: 600;
 }
 
+
+
 /* MOBILE ADJUSTMENTS */
 @media (max-width: 768px) {
   .hero-content h1 { font-size: 32px; }
@@ -550,4 +663,5 @@ body {
   .btn-cta { width: 100%; text-align: center; }
   .section-divider { margin-bottom: 40px; }
 }
+
 
