@@ -75,6 +75,9 @@ body {
   flex-direction: column;
   cursor: pointer;
   gap: 5px;
+  background: rgba(11,11,11,0.95);
+  padding: 10px;
+  border-radius: 6px;
 }
 
 .hamburger span {
@@ -82,7 +85,20 @@ body {
   height: 3px;
   background: #FFF;
   border-radius: 2px;
+  transition: all 0.3s ease;
 }
+
+/* Hamburger to Cross */
+.hamburger.active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
 
 /* MOBILE */
 @media (max-width: 768px) {
@@ -231,6 +247,49 @@ body {
 .about-cards .card:hover {
   transform: translateY(-6px);
   box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+/* ABOUT CARDS — BACKGROUND IMAGES */
+.about-cards .card {
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+/* Dark overlay for readability */
+.about-cards .card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(11,11,11,0.85),
+    rgba(11,11,11,0.35)
+  );
+  z-index: 0;
+}
+
+/* Ensure text stays above overlay */
+.about-cards .card h3,
+.about-cards .card p {
+  position: relative;
+  z-index: 1;
+}
+
+/* Individual card backgrounds */
+.about-cards .card.training {
+  background-image: url("assets/images/about-training.jpg");
+}
+.about-cards .card.vibe {
+  background-image: url("assets/images/about-community.jpg");
+}
+.about-cards .card.prestige {
+  background-image: url("assets/images/about-premium.jpg");
 }
 
 .about-cards h3 {
@@ -491,3 +550,4 @@ body {
   .btn-cta { width: 100%; text-align: center; }
   .section-divider { margin-bottom: 40px; }
 }
+
