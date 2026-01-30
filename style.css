@@ -597,6 +597,27 @@ body {
   color: #C9A24D;
 }
 
+/* PRICING PSYCHOLOGY */
+.pricing-card.popular {
+  border: 2px solid #C9A24D;
+  transform: scale(1.05);
+}
+
+.pricing-card.premium {
+  background: linear-gradient(180deg, #1A1A1A, #111);
+}
+
+.badge {
+  display: inline-block;
+  background: #C9A24D;
+  color: #0B0B0B;
+  padding: 6px 14px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  border-radius: 20px;
+}
+
 
 /* PAGE HERO */
 .page-hero {
@@ -645,6 +666,19 @@ body {
 }
 
 
+/* SCROLL REVEAL */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
 
 /* MOBILE ADJUSTMENTS */
 @media (max-width: 768px) {
@@ -663,5 +697,6 @@ body {
   .btn-cta { width: 100%; text-align: center; }
   .section-divider { margin-bottom: 40px; }
 }
+
 
 
