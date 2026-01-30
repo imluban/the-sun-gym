@@ -24,3 +24,23 @@ const path = window.location.pathname.split("/").pop();
 const activeId = pageMap[path] || 'nav-home';
 const activeLink = document.getElementById(activeId);
 if(activeLink) activeLink.classList.add('active');
+
+
+// Scroll reveal
+const reveals = document.querySelectorAll('.reveal');
+
+const revealOnScroll = () => {
+  reveals.forEach(el => {
+    const windowHeight = window.innerHeight;
+    const elementTop = el.getBoundingClientRect().top;
+    const revealPoint = 120;
+
+    if (elementTop < windowHeight - revealPoint) {
+      el.classList.add('active');
+    }
+  });
+};
+
+window.addEventListener('scroll', revealOnScroll);
+revealOnScroll();
+
